@@ -20,7 +20,8 @@ export function getData(callsigns = []) {
 
   const cutOff = moment().subtract(process.env.POSITION_MAX_AGE, 'seconds').unix();
 
-  return db.select([
+  console.log(db
+    .select([
       'arcid as callsign',
       'lat',
       'lon as long',
@@ -30,16 +31,33 @@ export function getData(callsigns = []) {
     .from(process.env.SQL_TABLE)
     .whereIn('arcid', callsigns)
     .where('end_timestamp', '>', cutOff)
-    .then(data =>
-      _.map(data, r => {
+    .toString()
+  );
+
+  return db
+    .select([
+      'arcid as callsign',
+      'lat',
+      'lon as long',
+      'modec as alt',
+      'end_timestamp as when'
+    ])
+    .from(process.env.SQL_TABLE)
+    .whereIn('arcid', callsigns)
+    .where('end_timestamp', '>', cutOff)
+    .then(data => {
+      debug(data);
+      const r = _.map(data, r => {
         return Object.assign({}, r, {
           when: moment.unix(r.when).valueOf(),
           alt: parseInt(r.alt) * 100,
           lat: parseFloat(r.lat),
           long: parseFloat(r.long),
         });
-      })
-    )
+      });
+
+      return r;
+    })
     .then(data => {
       recoverStatus();
       return data;
