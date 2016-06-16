@@ -7,7 +7,10 @@ const defaultStatus = {
 let status = Object.assign({}, defaultStatus);
 
 export function getStatus() {
-  return status;
+  return {
+    version: process.env.npm_package_version,
+    ...status
+  };
 }
 
 export function recoverStatus() {
