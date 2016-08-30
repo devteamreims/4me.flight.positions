@@ -20,7 +20,8 @@ export function getData(callsigns = []) {
 
   const cutOff = moment().subtract(process.env.POSITION_MAX_AGE, 'seconds').unix();
 
-  console.log(db
+  
+  debug(db
     .select([
       'arcid as callsign',
       'lat',
