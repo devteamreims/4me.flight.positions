@@ -4,9 +4,15 @@ cache:
   paths:
   - node_modules/
 
+stages:
+  - build
+  - test
+
 before_script:
   - npm install --silent
 
 check_deps:
   script:
     - npm run check-deps --silent
+  stage: build
+  allow_failure: true
