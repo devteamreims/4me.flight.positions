@@ -7,7 +7,8 @@
     "babel-node": "babel-node server.js",
     "dev": "DEBUG=4me.* npm run start",
     "start": "nodemon --exec npm run babel-node",
-    "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive"
+    "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive",
+    "check-deps": "npm-check --production"
   },
   "author": "Benjamin Beret <benjamin.beret@gmail.com>",
   "license": "ISC",
@@ -27,6 +28,7 @@
     "moment": "^2.13.0",
     "morgan": "^1.6.1",
     "mysql": "^2.10.2",
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.8.1",
+    "npm-check": "^5.2.3"
   }
 }
