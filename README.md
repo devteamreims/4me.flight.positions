@@ -1,6 +1,6 @@
 # 4me.flight.positions
 
-[![Dependencies](https://david-dm.org/devteamreims/4me.flight.positions.svg)](https://david-dm.org/devteamreims/4me.flight.positions)
+[![build status](https://gitlab.com/devteamreims/4me.flight.positions/badges/master/build.svg)](https://gitlab.com/devteamreims/4me.flight.positions/commits/master)
 
 ## API
 
