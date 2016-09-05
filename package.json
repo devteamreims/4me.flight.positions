@@ -4,6 +4,7 @@
   "description": "SQL to REST flight positions",
   "main": "index.js",
   "scripts": {
+    "preversion": "git add Changelog.md",
     "babel-node": "babel-node server.js",
     "dev": "DEBUG=4me.* npm run start",
     "start": "nodemon --exec npm run babel-node",
