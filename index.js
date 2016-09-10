@@ -8,10 +8,6 @@ import getRoutes from './src/routes';
 
 import {initDb} from './src/sql';
 
-import dotenv from 'dotenv';
-// Import stuff from .env
-dotenv.config();
-
 
 const app = express();
 

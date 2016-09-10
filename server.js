@@ -1,6 +1,5 @@
-import dotenv from 'dotenv';
-// Import stuff from .env
-dotenv.config();
+// Import .env variables
+import {} from 'dotenv/config';
 
 import app from './index';
 import http from 'http';
