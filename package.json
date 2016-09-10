@@ -8,7 +8,7 @@
     "babel-node": "babel-node server.js",
     "dev": "DEBUG=4me.* npm run start",
     "start": "nodemon --exec npm run babel-node",
-    "test": "NODE_ENV=test mocha --compilers js:babel-register --recursive",
+    "test": "jest",
     "check-deps": "npm-check --production --skip-unused"
   },
   "author": "Benjamin Beret <benjamin.beret@gmail.com>",
@@ -31,5 +31,21 @@
     "mysql": "^2.11.1",
     "nodemon": "^1.10.2",
     "npm-check": "^5.2.3"
+  },
+  "devDependencies": {
+    "babel-jest": "^15.0.0",
+    "babel-polyfill": "^6.13.0",
+    "jest": "^15.1.1",
+    "mock-knex": "^0.3.3",
+    "nock": "^8.0.0",
+    "supertest": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupTestFrameworkScriptFile": "tests/testSetup.js",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/"
+    ]
   }
 }

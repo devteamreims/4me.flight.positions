@@ -1,0 +1,11 @@
+exports[`spec 8.2 present SQL data in JSON format and produce a valid output 1`] = `
+Array [
+  Object {
+    "alt": 34000,
+    "callsign": "ABC123",
+    "lat": 49.2534,
+    "long": 4.033,
+    "when": 1473523511000
+  }
+]
+`;
