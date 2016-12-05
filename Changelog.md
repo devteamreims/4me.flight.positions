@@ -1,3 +1,7 @@
+# Master
+  * Move to yarn as package manager (devteamreims/4ME#141)
+  * Move to controlled docker image (devteamreims/4ME#140)
+  
 # v0.1.3
   * Add tests and integrate with gitlab-ci
   * Add automatic image build
