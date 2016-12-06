@@ -1,6 +1,6 @@
 {
   "name": "4me.flight.positions",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "SQL to REST flight positions",
   "main": "index.js",
   "scripts": {
